@@ -22,3 +22,11 @@ def now_serving(nextinline)
     nextinline.shift
   end
 end
+line_method(katz_deli)
+take_a_number(katz_deli, "Ada")
+take_a_number(katz_deli, "Grace")
+take_a_number(katz_deli, "Kent")
+line_method(katz_deli)
+now_serving(katz_deli)
+
+take_a_number(katz_deli, "Matz")

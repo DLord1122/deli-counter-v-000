@@ -1,15 +1,17 @@
-katz_deli = []
+katz_deli = ["Moshe", "Fayge", "Rivki"]
 
-def line_method(numinline)
-  line_method_array = []
-  if numinline.length == 0
-    puts "The line is currently empty."
+
+def line(array) # this was the one I figured out
+  if array.length >= 1
+    nuarray = []
+    counter = 1 
+    array.each do |name|
+      nuarray.push("#{counter}. #{name}")
+      counter += 1 
+    end 
+    puts "The line is currently: #{nuarray.join(" ")}"
   else
-    line_method_array.each.with_index(0) do |name, index|
-      line_method_array.push("#{index}. #{name}")
-      # push method will push the name into the index
-    end
-    puts "The line is: #{line_method_array.join(" ")}"
+    puts "The line is currently empty."
   end
 end
 def take_a_number(katz_deli, name)

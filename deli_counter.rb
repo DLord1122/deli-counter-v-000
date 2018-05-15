@@ -18,4 +18,7 @@ end
 
 def now_serving(nextinline)
   if nextinline.empty?
+  else puts "Currently serving #{nextinline[0]}."
+    nextinline.shift
   end
+end

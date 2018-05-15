@@ -1,31 +1,14 @@
-function currentLine(line) {
-  if (!line.length) {
-    return "The line is currently empty."
-  }
+katz_deli = []
 
-  const numbersAndNames = []
-
-  for (let i = 0, l = line.length; i < l; i++) {
-    numbersAndNames.push(`${i + 1}. ${line[i]}`)
-  }
-
-  return `The line is currently: ${numbersAndNames.join(', ')}`
-};
-
-function nowServing(line) {
-  if (!line.length) {
-    return "There is nobody waiting to be served!"
-  }
-
-  return `Currently serving ${line.shift()}.`
-}
-
-function takeANumber(line, name) {
-  line.push(name)
-
-  return `Welcome, ${name}. You are number ${line.length} in line.`
-};
-
-var katzDeli = ["jack","mimi"]
-console.log(currentLine(katzDeli))
-console.log(nowServing(katzDeli))
+def line_method(numinline)
+  line_method_array = []
+  if numinline.length == 0
+    puts "The line is currently empty."
+  else
+    line_method_array.each.with_index(0) do |name, index|
+      line_method_array.push("#{index}. #{name}")
+      # push method will push the name into the index 
+    end
+    puts "The line is: #{line_method_array.join(" ")}"
+  end
+end

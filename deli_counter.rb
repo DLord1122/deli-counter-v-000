@@ -18,7 +18,7 @@ function nowServing(line) {
   }
 
   return `Currently serving ${line.shift()}.`
-};
+}
 
 function takeANumber(line, name) {
   line.push(name)
@@ -26,6 +26,6 @@ function takeANumber(line, name) {
   return `Welcome, ${name}. You are number ${line.length} in line.`
 };
 
-var katzDeli = ["jack","mimi"];
-console.log(currentLine(katzDeli));
-console.log(nowServing(katzDeli));
+var katzDeli = ["jack","mimi"]
+console.log(currentLine(katzDeli))
+console.log(nowServing(katzDeli))

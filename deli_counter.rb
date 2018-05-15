@@ -1,33 +1,31 @@
-# Write your code here.
-var katzDeli = [];
+function currentLine(line) {
+  if (!line.length) {
+    return "The line is currently empty."
+  }
 
-function currentLine(line){
-  if(!line.length) {
-    return "The line is currently empty.";
+  const numbersAndNames = []
+
+  for (let i = 0, l = line.length; i < l; i++) {
+    numbersAndNames.push(`${i + 1}. ${line[i]}`)
   }
-  var lineNamesandNumbers = [];
-  
-  for(var i=0; i<line.length; i++) {
-    lineNamesandNumbers.push(i+1 + ". "+ line[i]);
-  }
-  console.log("The line is currently: " + lineNamesandNumbers)
-  return "The line is currently: " + lineNamesandNumbers.join(', ');
-}
+
+  return `The line is currently: ${numbersAndNames.join(', ')}`
+};
 
 function nowServing(line) {
-  if(!line.length) {
-    console.log("There is nobody waiting to be served!")
+  if (!line.length) {
     return "There is nobody waiting to be served!"
-  } else {
-    //console.log("Currently serving " + line.shift());
-    return "Currently serving " + line.shift();
   }
-}
 
-function takeANumber(line, name){
-  line.push(name);
-  
-  console.log("Welcome, " + name + ". You are number " + line.length + " in line.");
-  
-  return "Welcome, " + name + ". You are number " + line.length + " in line."
-}
+  return `Currently serving ${line.shift()}.`
+};
+
+function takeANumber(line, name) {
+  line.push(name)
+
+  return `Welcome, ${name}. You are number ${line.length} in line.`
+};
+
+var katzDeli = ["jack","mimi"];
+console.log(currentLine(katzDeli));
+console.log(nowServing(katzDeli));
